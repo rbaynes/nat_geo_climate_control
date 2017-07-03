@@ -56,7 +56,55 @@ We will build a simple system to attempt to control humidity.
     * Embedded, so the only way to get debugging output is from the serial port (or blinking an LED).
     * Why `setup()` and `loop()` ?
   1. Try the two test programs after you wire the circuits:  Sensor test and fan/motor PWM test.
-  1. **Using the two test programs, can you write a control program that reads the sensor and uses the fan to reduce (or hold) the humidity at a set level?**  (hint: if you get stuck, open simple_climate.ino to see one implementation)
+  1. **Using the two test programs, can you write a control program that reads the sensor and uses the fan to reduce (or hold) the humidity at a set level?**  
+    * (hint: if you get stuck, open simple_climate.ino to see one implementation)
+    * Here is some example output in the serial monitor from one of my tests:
+```
+Enter the set point for relative humidity (a tenth lower than ambient) [100.00]: 
+Temperature: 23.40 C	Humidity: 34.80 %	Desired Humidity: 100.00 %	Fan speed: 0
+Temperature: 23.40 C	Humidity: 34.90 %	Desired Humidity: 100.00 %	Fan speed: 0
+Temperature: 23.40 C	Humidity: 36.40 %	Desired Humidity: 100.00 %	Fan speed: 0
+Temperature: 23.40 C	Humidity: 36.90 %	Desired Humidity: 100.00 %	Fan speed: 0
+Temperature: 23.40 C	Humidity: 36.50 %	Desired Humidity: 100.00 %	Fan speed: 0
+Temperature: 23.40 C	Humidity: 36.10 %	Desired Humidity: 100.00 %	Fan speed: 0
+Temperature: 23.40 C	Humidity: 35.70 %	Desired Humidity: 100.00 %	Fan speed: 0
+Temperature: 23.40 C	Humidity: 35.40 %	Desired Humidity: 100.00 %	Fan speed: 0
+Temperature: 23.40 C	Humidity: 35.10 %	Desired Humidity: 100.00 %	Fan speed: 0
+Temperature: 23.40 C	Humidity: 35.00 %	Desired Humidity: 100.00 %	Fan speed: 0
+Temperature: 23.40 C	Humidity: 34.80 %	Desired Humidity: 100.00 %	Fan speed: 0
+Temperature: 23.40 C	Humidity: 34.70 %	Desired Humidity: 100.00 %	Fan speed: 0
+Temperature: 23.40 C	Humidity: 34.60 %	Desired Humidity: 100.00 %	Fan speed: 0
+Temperature: 23.40 C	Humidity: 34.60 %	Desired Humidity: 100.00 %	Fan speed: 0
+Temperature: 23.50 C	Humidity: 34.60 %	Desired Humidity: 100.00 %	Fan speed: 0
+Humidity set point: 34.50
+Temperature: 23.50 C	Humidity: 34.60 %	Desired Humidity: 34.50 %	Fan speed: 0
+Temperature: 23.50 C	Humidity: 34.60 %	Desired Humidity: 34.50 %	Fan speed: 125
+Temperature: 23.50 C	Humidity: 34.90 %	Desired Humidity: 34.50 %	Fan speed: 150
+Temperature: 23.50 C	Humidity: 36.10 %	Desired Humidity: 34.50 %	Fan speed: 175
+Temperature: 23.50 C	Humidity: 36.30 %	Desired Humidity: 34.50 %	Fan speed: 200
+Temperature: 23.50 C	Humidity: 37.40 %	Desired Humidity: 34.50 %	Fan speed: 225
+Temperature: 23.50 C	Humidity: 37.10 %	Desired Humidity: 34.50 %	Fan speed: 250
+Temperature: 23.50 C	Humidity: 37.10 %	Desired Humidity: 34.50 %	Fan speed: 255
+Temperature: 23.50 C	Humidity: 35.90 %	Desired Humidity: 34.50 %	Fan speed: 255
+Temperature: 23.60 C	Humidity: 35.30 %	Desired Humidity: 34.50 %	Fan speed: 255
+Temperature: 23.60 C	Humidity: 34.80 %	Desired Humidity: 34.50 %	Fan speed: 255
+Temperature: 23.60 C	Humidity: 34.50 %	Desired Humidity: 34.50 %	Fan speed: 255
+Temperature: 23.60 C	Humidity: 34.40 %	Desired Humidity: 34.50 %	Fan speed: 230
+Temperature: 23.60 C	Humidity: 35.90 %	Desired Humidity: 34.50 %	Fan speed: 205
+Temperature: 23.60 C	Humidity: 36.10 %	Desired Humidity: 34.50 %	Fan speed: 230
+Temperature: 23.60 C	Humidity: 35.80 %	Desired Humidity: 34.50 %	Fan speed: 255
+...
+Temperature: 23.50 C	Humidity: 34.40 %	Desired Humidity: 34.50 %	Fan speed: 255
+Temperature: 23.50 C	Humidity: 34.30 %	Desired Humidity: 34.50 %	Fan speed: 230
+Temperature: 23.50 C	Humidity: 34.20 %	Desired Humidity: 34.50 %	Fan speed: 205
+Temperature: 23.50 C	Humidity: 34.10 %	Desired Humidity: 34.50 %	Fan speed: 180
+Temperature: 23.40 C	Humidity: 34.00 %	Desired Humidity: 34.50 %	Fan speed: 155
+Temperature: 23.40 C	Humidity: 34.00 %	Desired Humidity: 34.50 %	Fan speed: 130
+Temperature: 23.40 C	Humidity: 34.10 %	Desired Humidity: 34.50 %	Fan speed: 105
+Temperature: 23.40 C	Humidity: 34.10 %	Desired Humidity: 34.50 %	Fan speed: 0
+Temperature: 23.40 C	Humidity: 34.10 %	Desired Humidity: 34.50 %	Fan speed: 0
+Temperature: 23.40 C	Humidity: 34.20 %	Desired Humidity: 34.50 %	Fan speed: 0
+```
 
 ## Stretch goal / fun / homework
   * Add in the LED panel.
