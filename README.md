@@ -9,7 +9,7 @@ It is a system with a feedback loop that has one or more inputs about the system
 ![Alt text](/closed-loop-control-system.gif?raw=true)
 
 ## Simple climate control
-We will build a simple system to attempt to control humidity.  
+We will build a simple system to attempt to control humidity.  The sensor will tell us the relative humidity and we can lower it by controlling the speed of a fan pointed at it.
 
 ## Set up your development system
   * Windows or Mac PC with USB port.
