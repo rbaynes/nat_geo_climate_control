@@ -4,8 +4,8 @@
 Build a circuit and write the embedded software necessary to control a simple climate.
 
 ## What is a control system?
-https://en.wikipedia.org/wiki/Control_theory
-It is a system with a feedback loop that has one or more inputs about the system (sensing) and one or more ways to affect the system (outputs/actuation) to produce a desired state.
+It is a system with a feedback loop that has one or more inputs about the system (sensing) and one or more ways to affect the system (outputs/actuation) to produce a desired state.  [Control theory](https://en.wikipedia.org/wiki/Control_theory)
+![Alt text](/closed-loop-control-system.gif?raw=true)
 
 ## Simple climate control
 We will build a simple system to attempt to control humidity.  
@@ -25,7 +25,7 @@ We will build a simple system to attempt to control humidity.
   * Arduino mega 2560 and USB cable.
   * Small bread board and handful of male to male jumper wires.
   * 12V PC fan - look for low current ones.
-  * AM2315 temperature and humidity sensor with male pins on its wires.
+  * [AM2315](https://cdn-shop.adafruit.com/datasheets/AM2315.pdf) temperature and humidity sensor with male pins on its wires.  
   * PN2222 transistor.
   * 1N4001 diode.
   * 220 or 270 Ω resistor.
@@ -45,5 +45,20 @@ We will build a simple system to attempt to control humidity.
     * Connect the resistor to the middle transistor row and to a row farther out (to pin 3).
     * Connect the Arduino pin 3 to the far end of the resistor (away from the transistor).
     * Connect the left leg row of the transistor to the Arduino GND.
-
 ![Alt text](/arduino_breadboard.jpg?raw=true)
+
+## Programming
+  1. Overview of the sensor, I2C and its frequency (.5 Hz).
+  1. Overview of PWM for the 12V fan (using 5V and a transistor so the digital output is not driving the fan)
+  1. Overview of Arduino programming:
+    * C++ with utility classes (String, Serial, etc).
+    * Embedded, so the only way to get debugging output is from the serial port (or blinking an LED).
+    * Why `setup()` and `loop()` ?
+  1. Try the two test programs after you wire the circuits:  Sensor test and fan/motor PWM test.
+  1. **Using the two test programs, can you write a control program that reads the sensor and uses the fan to reduce (or hold) the humidity at a set level?**  (hint: if you get stuck, open simple_climate.ino to see one implementation)
+
+## Stretch goal / fun / homework
+  * Add in the LED panel.
+  * How can we improve this control system?
+  * Make it more accurate (hold the desired point longer)?
+  * Make it more responsive?
