@@ -1,4 +1,5 @@
-# National Geographic explorers programming fun.  July 20, 2017
+# National Geographic explorers programming fun.  
+July 20, 2017
 
 ## Programming challenge
 Build a circuit and write the embedded software necessary to control a simple climate.
