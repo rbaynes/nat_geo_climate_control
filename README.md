@@ -46,6 +46,7 @@ We will build a simple system to attempt to control humidity.
     * Connect the Arduino pin 3 to the far end of the resistor (away from the transistor).
     * Connect the left leg row of the transistor to the Arduino GND.
 ![Alt text](/arduino_breadboard.jpg?raw=true)
+[image and wiring credits](https://learn.adafruit.com/adafruit-arduino-lesson-13-dc-motors)
 
 ## Programming
   1. Overview of the sensor, I2C and its frequency (.5 Hz).
