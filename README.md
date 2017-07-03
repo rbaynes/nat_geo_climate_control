@@ -2,3 +2,6 @@
 National Geographic explorers example embedded programming for climate control
 
 blah
+
+
+![Alt text](/arduino_breadboard.jpg?raw=true)
