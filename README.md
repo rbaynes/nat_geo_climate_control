@@ -6,7 +6,7 @@ Build a circuit and write the embedded software necessary to control a simple cl
 
 ## What is a control system?
 It is a system with a feedback loop that has one or more inputs about the system (sensing) and one or more ways to affect the system (outputs/actuation) to produce a desired state.  [Control theory](https://en.wikipedia.org/wiki/Control_theory)
-![Alt text](/closed-loop-control-system.gif?raw=true)
+![control system](/pics/closed-loop-control-system.gif?raw=true)
 
 ## Simple climate control
 We will build a simple system to attempt to control humidity.  The sensor will tell us the relative humidity and we can lower it by controlling the speed of a fan pointed at it.
@@ -46,8 +46,10 @@ We will build a simple system to attempt to control humidity.  The sensor will t
     * Connect the resistor to the middle transistor row and to a row farther out (to pin 3).
     * Connect the Arduino pin 3 to the far end of the resistor (away from the transistor).
     * Connect the left leg row of the transistor to the Arduino GND.
-![Alt text](/arduino_breadboard.jpg?raw=true)
+![breadboard](/pics/arduino_breadboard.jpg?raw=true)
 [image and wiring credits](https://learn.adafruit.com/adafruit-arduino-lesson-13-dc-motors)
+![big photo](/pics/big.jpg?raw=true)
+![small photo](/pics/small.jpg?raw=true)
 
 ## Programming
   * Overview of the sensor, I2C and its frequency (.5 Hz).
