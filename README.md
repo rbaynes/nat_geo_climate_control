@@ -17,7 +17,7 @@ We will build a simple system to attempt to control humidity.  The sensor will t
   * Download [sensor and I2C serial bus Arduino libraries](/arduino_library_for_am2315.tgz) and unzip them to your `~/Documents/Arduino/library directory.`
   * Download [example code](/arduino_test_programs.tgz) and unzip it to your `~/Documents/Arduino` directory.
   * Plug the USB cable into your PC and the Arduino board (without any circuits).
-  * Start the Arduino IDE, open and compile the test programs.
+  * Start the Arduino IDE (to open and compile the test programs)
     * IDE > Tools (make sure board says "mega 2560", and pick the port you are using - should be /dev/cu.usb...)
     * IDE > File > Open... > pick "am2315_test"
     * Click the "upload" right arrow in the menu bar to make sure the sketch compiles and uploads.
@@ -52,14 +52,22 @@ We will build a simple system to attempt to control humidity.  The sensor will t
 ![big photo](/pics/big.jpg?raw=true)
 ![small photo](/pics/small.jpg?raw=true)
 
+## Testing the circuit
+  * Start the Arduino IDE and open the `am2315_test.ino` sketch code.  
+    * Upload it and watch the humidity values change if you blow on it.
+    * Remember to open the serial monitor window.
+    * How long does the sensor take to return to the ambient humidity?
+  * Now open the `PWM_test.ino` file and upload it to the Arduino board.
+    * Play with the duty cycle it takes to control your fan with pulse width modulation (PWM).
+    * Do you notice that the fan won't run if the duty cycle is too low?
+
 ## Programming
   * Overview of the sensor, I2C and its frequency (.5 Hz).
-  * Overview of PWM for the 12V fan (using 5V and a transistor so the digital output is not driving the fan)
+  * Overview of the PWM for the 12V fan (using 5V and a transistor so the digital output is not driving the fan)
   * Overview of Arduino programming:
     * C++ with utility classes (String, Serial, etc).
     * Embedded, so the only way to get debugging output is from the serial port (or blinking an LED).
-    * Why `setup()` and `loop()` ?
-  * Try the two test programs after you wire the circuits:  Sensor test and fan/motor PWM test.
+    * Why `setup()` and `loop()` special functions?
   * **Using the two test programs, can you write a control program that reads the sensor and uses the fan to reduce (or hold) the humidity at a set level?**  
     * (hint: if you get stuck, open simple_climate.ino to see one implementation)
     * Here is some example output in the serial monitor from one of my tests:
