@@ -14,8 +14,8 @@ We will build a simple system to attempt to control humidity.  The sensor will t
 ## Set up your development system
   * Use Windows or Mac PC with USB port.
   * Download and install the [Arduino IDE](https://www.arduino.cc/en/Main/Software).
-  * Download [sensor and I2C serial bus Arduino libraries](/arduino_library_for_am2315.tgz) and unzip them to your ~/Documents/Arduino/library directory.
-  * Download [example code](/arduino_test_programs.tgz) and unzip it to your /Documents/Arduino directory.
+  * Download [sensor and I2C serial bus Arduino libraries](/arduino_library_for_am2315.tgz) and unzip them to your `~/Documents/Arduino/library directory.`
+  * Download [example code](/arduino_test_programs.tgz) and unzip it to your `~/Documents/Arduino` directory.
   * Plug the USB cable into your PC and the Arduino board (without any circuits).
   * Start the Arduino IDE, open and compile the test programs.
     * IDE > File > Open... > pick "am2315_test"
