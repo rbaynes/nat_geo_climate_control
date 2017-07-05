@@ -35,8 +35,8 @@ We will build a simple system to attempt to control humidity.  The sensor will t
   * AM2315:
     * Red wire to 5V on Arduino
     * Black wire to GND on Arduino
-    * Yellow wire to SDA on Arduino (I2C)
-    * White wire to SLC on Arduino (I2C)
+    * Yellow wire to SDA pin 20 on Arduino (I2C)
+    * White wire to SCL pin 21 on Arduino (I2C)
   * Breadboard:
     * Put each of the 3 legs of the transistor into their own row (left, middle, right facing the flat side of the transistor)
     * Connect the NON-silver banded end of the diode into the RIGHT leg row of the transistor.
