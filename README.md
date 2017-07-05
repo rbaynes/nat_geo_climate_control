@@ -18,6 +18,7 @@ We will build a simple system to attempt to control humidity.  The sensor will t
   * Download [example code](/arduino_test_programs.tgz) and unzip it to your `~/Documents/Arduino` directory.
   * Plug the USB cable into your PC and the Arduino board (without any circuits).
   * Start the Arduino IDE, open and compile the test programs.
+    * IDE > Tools (make sure board says "mega 2560", and pick the port you are using - should be /dev/cu.usb...)
     * IDE > File > Open... > pick "am2315_test"
     * Click the "upload" right arrow in the menu bar to make sure the sketch compiles and uploads.
     * Click the "serial monitor" button in the upper right corner of the window.
