@@ -50,14 +50,14 @@ We will build a simple system to attempt to control humidity.  The sensor will t
 [image and wiring credits](https://learn.adafruit.com/adafruit-arduino-lesson-13-dc-motors)
 
 ## Programming
-  1. Overview of the sensor, I2C and its frequency (.5 Hz).
-  1. Overview of PWM for the 12V fan (using 5V and a transistor so the digital output is not driving the fan)
-  1. Overview of Arduino programming:
+  * Overview of the sensor, I2C and its frequency (.5 Hz).
+  * Overview of PWM for the 12V fan (using 5V and a transistor so the digital output is not driving the fan)
+  * Overview of Arduino programming:
     * C++ with utility classes (String, Serial, etc).
     * Embedded, so the only way to get debugging output is from the serial port (or blinking an LED).
     * Why `setup()` and `loop()` ?
-  1. Try the two test programs after you wire the circuits:  Sensor test and fan/motor PWM test.
-  1. **Using the two test programs, can you write a control program that reads the sensor and uses the fan to reduce (or hold) the humidity at a set level?**  
+  * Try the two test programs after you wire the circuits:  Sensor test and fan/motor PWM test.
+  * **Using the two test programs, can you write a control program that reads the sensor and uses the fan to reduce (or hold) the humidity at a set level?**  
     * (hint: if you get stuck, open simple_climate.ino to see one implementation)
     * Here is some example output in the serial monitor from one of my tests:
 ```
